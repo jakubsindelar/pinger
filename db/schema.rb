@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140720072547) do
+ActiveRecord::Schema.define(version: 20141203204023) do
 
   create_table "hosts", force: true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140720072547) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position"
+    t.string   "mc_address"
   end
 
   create_table "services", force: true do |t|

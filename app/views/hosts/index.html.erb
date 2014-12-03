@@ -6,8 +6,9 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th class="name">Name</th>
-        <th class="address">Address</th>
+        <th class="name">Hostname</th>
+        <th class="name">IP Address</th>
+        <th class="address">Mac Address</th>
         <th class="status">Status</th>
       </tr>
     </thead>
@@ -17,7 +18,8 @@
       <script>$(window).load(function() { $.getScript('<%= hosts_item_path id: host.id %>.js'); }); </script>
       <tr class="" id="host<%= host.id %>">
         <td class="name"><%= link_to edit_host_path(host) do %><span class="fa fa-power-off"></span> <%= host.name %><% end %></td>
-        <td class="address"><span class="fa fa-desktop"> <%= host.address %></span></td>
+        <td class="address"><span class="fa fa-power-off"> <%= host.address %></span></td>
+        <td class="address"><span class="fa fa-desktop"> <%= host.mc_address %></span></td>
         <td class="status"></td>
       </tr>
     <% end %>
